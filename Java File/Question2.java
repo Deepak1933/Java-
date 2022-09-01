@@ -1,33 +1,41 @@
-package Array;
 
+package Method.java;
 import java.util.Scanner;
 
+/*
+ * Write a method named isEven that accepts an int argument. 
+ * The method should return true if the argument is even, or false otherwise. Also write a program to test your method.
+ */
 public class Question2 {
-    static Scanner console = new Scanner(System.in);
-	public static void main(String[]args)
+	static Scanner f = new Scanner( System.in);
+	public static void main(String[] args)
+	{   
+		
+		System.out.print("Enter The Number:");
+	     int num = f.nextInt();
+	
+      if(isEven(num))
+      {
+    	  System.out.println("The number is even");    	  
+      }
+      else 
+      {
+    	  System.out.println("The number is odd");
+      }
+}
+
+public static boolean isEven(int number)
+{
+		
+	if( number % 2 == 0)
 	{
-	 int size;
-
-         // Create a Scanner object for keyboard input.
-
-
-    System.out.print("Enter the size of the array: ");
-    size = console.nextInt();
-
-    // Create an array to hold integers.
-    int[] list = new int[size];
-
-    System.out.println("Enter " + list.length + " integers.");
-    int sum = 0;
-     double average = 0;
-    // Get integers.
-    for (int i = 0; i < list.length; i++)
-     {
-       list[i] = console.nextInt();
-       sum += list[i];
-       average = sum / list[i];
-     }
-    System.out.println("The sum of the array element:" +sum);
-    System.out.println("The average of the array element:" +average);
+		return true;
 	}
+	else
+	{
+		return false; 
+	}
+
+
+   }
 }

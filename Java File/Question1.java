@@ -1,31 +1,25 @@
-package Array;
+package Condition.java;
 import java.util.Scanner;
 
-// 2. Write a Java program to sum values of an array.
 public class Question1 {
-	
-	public static void main(String[] args) 
-	{  
-		int size;
-		try (Scanner in = new Scanner(System.in)) {
-			System.out.print("Enter the size of array");
-			 size = in.nextInt();
-			int my_array[] = new int[size] ;
-			
-			System.out.println(my_array.length);
-			int sum = 0;
+//	1. Write a Java program to get a number from the user and print whether it is positive or negative. Go to the editor
 
-			for (int i = 0; i <= my_array.length; i++)
-			{   
-				my_array[i] = in.nextInt();
-				sum += my_array[i];
-			
-			}
-			System.out.println("The sum is " + sum);
-		}
-		}
+//	Test Data
+	//Input number: 35
+  static	Scanner console = new Scanner(System.in);
+	public static void main( String[] args)
+	{
 		
+		System.out.print("Enter the number:");
+		int num = console.nextInt();
+		if(num>0)
+		{
+			System.out.println("Postive Number");
+		
+		}
+		else if(num<0)
+		{
+			System.out.println("Negative Number");	
+		}
 	}
-	
-
-
+}
